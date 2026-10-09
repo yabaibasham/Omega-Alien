@@ -1,0 +1,26 @@
+# Render Blueprint: New > Blueprint > pick this repo. Fill the "sync: false" values in the dashboard.
+services:
+  - type: web
+    name: omega-alien
+    runtime: node
+    plan: starter            # free instances sleep, which a launch site can't afford
+    buildCommand: npm ci && npm run verify:release && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: OPERATOR_KEY
+        generateValue: true
+      - key: OMEGA_MINT
+        sync: false
+      - key: OMEGA_LAUNCH_TIME
+        sync: false
+      - key: SOLANA_MAINNET_RPC
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: ALLOW_MAINNET_ACTIONS
+        value: "false"
+      - key: ENABLE_SIMULATION
+        value: "false"

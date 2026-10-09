@@ -1,0 +1,6 @@
+{
+  "name": "Omega Alien Engine v1.5.5 · Solana Reliability Suite",
+  "description": "Production-focused Solana token tooling with wallet-signed transactions, on-chain confirmation, mainnet safety gates, transparent failure states, and opt-in simulation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
